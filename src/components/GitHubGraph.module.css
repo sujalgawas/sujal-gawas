@@ -1,0 +1,17 @@
+.wrapper {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.graph {
+  min-width: 600px;
+  width: 100%;
+  height: auto;
+  /* Invert to dark-mode and tint with amber */
+  filter: invert(1) hue-rotate(180deg) brightness(0.85);
+  border-radius: var(--radius);
+}

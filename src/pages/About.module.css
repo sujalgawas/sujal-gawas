@@ -1,0 +1,14 @@
+.about {
+  max-width: 60ch;
+}
+
+.body p {
+  color: var(--text-muted);
+  line-height: var(--leading-relaxed);
+  font-size: var(--text-base);
+  margin-bottom: var(--space-5);
+}
+
+.body p:last-child {
+  margin-bottom: 0;
+}

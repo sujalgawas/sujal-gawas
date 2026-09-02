@@ -1,0 +1,203 @@
+/* ── Blog List ── */
+.empty {
+  max-width: 45ch;
+}
+
+.empty p {
+  color: var(--text-muted);
+  margin-bottom: var(--space-3);
+  line-height: var(--leading-relaxed);
+}
+
+.empty code, .hint code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: var(--text-dim);
+  background: var(--bg-subtle);
+  padding: 1px 5px;
+  border-radius: var(--radius);
+}
+
+.hint {
+  font-size: var(--text-sm);
+  color: var(--text-dim);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.item {
+  border-top: 1px solid var(--border-dim);
+}
+
+.item:last-child {
+  border-bottom: 1px solid var(--border-dim);
+}
+
+.postLink {
+  display: block;
+  padding: var(--space-5) 0;
+  transition: opacity var(--transition);
+}
+
+.postLink:hover .postTitle {
+  color: var(--accent);
+}
+
+.postMeta {
+  margin-bottom: var(--space-2);
+}
+
+.date {
+  font-size: var(--text-xs);
+  color: var(--text-dim);
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+}
+
+.postTitle {
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-2);
+  transition: color var(--transition);
+}
+
+.postDesc {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: var(--leading-normal);
+}
+
+/* ── Blog Post ── */
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--text-dim);
+  margin-bottom: var(--space-8);
+  transition: color var(--transition);
+}
+
+.back:hover {
+  color: var(--text);
+}
+
+.post {
+  max-width: 65ch;
+}
+
+.postHeader {
+  margin-bottom: var(--space-10);
+}
+
+.postHeading {
+  font-size: clamp(var(--text-xl), 5vw, var(--text-3xl));
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: var(--text);
+  line-height: var(--leading-tight);
+  margin-top: var(--space-3);
+}
+
+.notFound {
+  color: var(--text-muted);
+  margin-bottom: var(--space-4);
+}
+
+/* ── Prose styles for rendered markdown ── */
+.prose {
+  color: var(--text-muted);
+  line-height: var(--leading-relaxed);
+  font-size: var(--text-base);
+}
+
+.prose h2, .prose h3, .prose h4 {
+  color: var(--text);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-4);
+}
+
+.prose h2 { font-size: var(--text-xl); }
+.prose h3 { font-size: var(--text-lg); }
+.prose h4 { font-size: var(--text-base); }
+
+.prose p {
+  margin-bottom: var(--space-5);
+}
+
+.prose a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-dim);
+  text-underline-offset: 3px;
+  transition: color var(--transition);
+}
+
+.prose a:hover {
+  color: hsl(34, 80%, 65%);
+}
+
+.prose code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  color: var(--text);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-dim);
+  padding: 1px 5px;
+  border-radius: var(--radius);
+}
+
+.prose pre {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  overflow-x: auto;
+  margin-bottom: var(--space-6);
+}
+
+.prose pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.prose ul, .prose ol {
+  padding-left: var(--space-5);
+  margin-bottom: var(--space-5);
+}
+
+.prose li {
+  margin-bottom: var(--space-2);
+}
+
+.prose ul li {
+  list-style: disc;
+}
+
+.prose ol li {
+  list-style: decimal;
+}
+
+.prose blockquote {
+  border-left: 2px solid var(--accent-dim);
+  margin: var(--space-6) 0;
+  padding-left: var(--space-5);
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.prose hr {
+  margin: var(--space-10) 0;
+}
