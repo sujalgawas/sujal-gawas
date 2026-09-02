@@ -13,8 +13,8 @@ export default function Home() {
         <p className={styles.eyebrow}>Based in Mumbai, India</p>
         <h1 className={styles.name}>Sujal Gawas</h1>
         <p className={styles.tagline}>
-          AI/ML engineer building LLM applications,<br className={styles.br} />
-          agentic systems, and distributed backends.
+          AI/ML enthusiast building LLM applications,<br className={styles.br} />
+          agentic systems, and backend infrastructure — all hosted from my homelab.
         </p>
         <SocialLinks size={17} className={styles.socials} />
       </section>
