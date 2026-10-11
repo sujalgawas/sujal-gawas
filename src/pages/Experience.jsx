@@ -4,6 +4,18 @@ import styles from './Experience.module.css'
 
 const EXPERIENCE = [
   {
+    company:   'ElectraWireless',
+    companyUrl: 'https://www.electrawireless.co/',
+    title:     'AI/ML Engineer Intern',
+    location:  'United States — Remote',
+    period:    'Sept 2026 – Present',
+    bullets: [
+      "Building machine learning models using XGBoost and Random Forest for the company's healthcare division to support disease prediction from structured clinical data.",
+      'Fine-tuning ResNet and other convolutional image-based models to predict and classify diseases from medical imaging data.',
+      'Collaborating on data pipelines to clean, validate, and prepare structured and image-based healthcare datasets for model training and evaluation.',
+    ],
+  },
+  {
     company:   'Alesa AI Ltd',
     companyUrl: 'https://www.linkedin.com/company/alesaai',
     title:     'AI and Software Engineer Intern',
@@ -35,15 +47,19 @@ export default function Experience() {
                 <div>
                   <h2 className={styles.title}>{job.title}</h2>
                   <div className={styles.meta}>
-                    <a
-                      href={job.companyUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.company}
-                    >
-                      {job.company}
-                      <ExternalLink size={12} strokeWidth={1.5} className={styles.extIcon} />
-                    </a>
+                    {job.companyUrl ? (
+                      <a
+                        href={job.companyUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.company}
+                      >
+                        {job.company}
+                        <ExternalLink size={12} strokeWidth={1.5} className={styles.extIcon} />
+                      </a>
+                    ) : (
+                      <span className={styles.company}>{job.company}</span>
+                    )}
                     <span className="text-dim">·</span>
                     <span className={styles.location}>{job.location}</span>
                   </div>
